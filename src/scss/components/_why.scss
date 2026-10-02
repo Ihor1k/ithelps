@@ -1,0 +1,168 @@
+.why {
+    margin-top: 150px;
+}
+
+.why-context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-text {
+    color: var(--900, #1D1F21);
+text-align: center;
+font-family: "Special Gothic";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 644px;
+}
+
+.why-inner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.why-column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.why-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 400ms ease-in-out;
+}
+
+.why-item:hover .why-item-title {
+    color: var(--D-Accent, #749901);
+}
+
+.why-item-side {
+    margin-left: -130px;
+}
+
+.why-item-side-left {
+    margin-right: -130px;
+}
+
+.why-icon svg path {
+    transition: all 400ms ease-in-out;
+    stroke: transparent;
+    stroke-width: 1px;
+}
+
+.why-item:hover .why-icon svg path {
+    stroke: #749901;
+}
+
+.why-item:hover .why-item-text {
+    color: var(--Primary, #00254A);
+}
+
+.why-item-title {
+    color: var(--700, #474A50);
+text-align: center;
+font-family: "Special Gothic";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 28px 0 12px 0;
+transition: all 400ms ease-in-out;
+}
+
+.why-item-text {
+    color: var(--600, #65686B);
+text-align: center;
+font-family: "Special Gothic";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 148%; /* 23.68px */
+max-width: 260px; 
+width: 100%;
+transition: all 400ms ease-in-out;
+}
+
+.why-button {
+    display: flex;
+    justify-content: center;
+}
+
+.why-btn {
+    color: var(--400, #F1F8FF);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+
+    padding: 12px 27px;
+    border-radius: 12px;
+    background: var(--Primary, #00254A);
+    border: 1px solid #00254A;
+
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.why-btn:hover {
+    background: #C1FF02;
+    border: 1px solid #C1FF02;
+    color: var(--900, #1D1F21);
+}
+
+@media screen and (max-width: 480px) {
+    .why {
+        margin-top: 64px;
+    }
+
+    .why-text {
+        font-size: 16px;
+    }
+
+    .why-inner {
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 32px;
+    }
+
+    .why-column {
+        width: 100%;
+        gap: 32px;
+        align-items: center;
+    }
+
+    .why-image {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .why-item-side,
+    .why-item-side-left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .why-item-title {
+        font-size: 20px;
+        margin: 16px 0 8px;
+    }
+
+    .why-item-text {
+        max-width: 100%;
+    }
+
+    .why-button {
+        margin-top: 32px;
+    }
+}

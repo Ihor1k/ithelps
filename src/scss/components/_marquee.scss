@@ -1,0 +1,61 @@
+.marquee {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    margin-top: 35px;
+    // position: relative;
+    /* опціонально — невелика тінь або фон */
+    @media screen and (max-width: 480px) {
+        margin-top: 35px;   
+    }
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scrollText 30s linear infinite;
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    padding-right: 2rem; /* відстань між повтореннями */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--Primary, #00254A);
+    font-family: "Special Gothic Expanded One";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    color: transparent;
+    // padding-bottom: 5px;
+  }
+  
+  /* 🔁 плавна безшовна анімація */
+  @keyframes scrollText {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  
+  /* 📱 адаптив */
+  @media (max-width: 480px) {
+    .marquee {
+      margin-top: 24px;
+    }
+
+    .marquee-text {
+      font-size: 36px;
+      padding-right: 1.5rem;
+      -webkit-text-stroke-width: 1.5px;
+    }
+  
+    .marquee-track {
+      animation: scrollText 18s linear infinite;
+    }
+  }
+  

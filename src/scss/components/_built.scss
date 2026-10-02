@@ -1,0 +1,167 @@
+.built {
+    position: relative;
+    margin-top: 120px;
+    height: 100vh;
+}
+
+.built-bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.built-inner {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-end;
+    padding: 103px 0;
+    width: 100%;
+}
+
+.built-text {
+    color: var(--400, #F1F8FF);
+text-align: right;
+font-family: "Special Gothic";
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 34px; /* 106.25% */
+letter-spacing: 5.76px;
+text-align: right;
+max-width: 647px;
+}
+
+.built-title {
+    color: var(--400, #F1F8FF);
+font-family: "Special Gothic Expanded One";
+font-size: 100px;
+font-style: normal;
+font-weight: 400;
+line-height: 158.434%; /* 158.434px */
+letter-spacing: 85px;
+max-width: 689px;
+}   
+
+.built-context {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 480px) {
+    .built {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        margin-top: 48px;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .built > .container {
+        display: contents;
+    }
+
+    .built-inner {
+        display: contents;
+        padding: 0;
+        width: auto;
+    }
+
+    .built-bg {
+        grid-row: 3;
+        grid-column: 1;
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 460px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // .built::after {
+    //     content: "";
+    //     grid-row: 3;
+    //     grid-column: 1;
+    //     z-index: 1;
+    //     width: 100%;
+    //     min-width: 0;
+    //     background: rgba(0, 0, 0, 0.42);
+    //     pointer-events: none;
+    // }
+
+    .built-context {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .built-context:nth-child(1) {
+        grid-row: 1;
+        justify-content: flex-end;
+        padding: 8px 16px 28px;
+
+        .built-text {
+            text-align: right;
+        }
+    }
+
+    .built-context:nth-child(3) {
+        grid-row: 2;
+        justify-content: flex-start;
+        padding: 0 16px 40px;
+
+        .built-text {
+            text-align: left;
+        }
+    }
+
+    .built-text {
+        color: var(--900, #1D1F21);
+        // text-align: right;
+        font-family: "Special Gothic";
+        font-size: 17.855px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18.971px; /* 106.25% */
+        letter-spacing: 3.214px;
+    }
+
+    .built-title {
+        grid-row: 3;
+        grid-column: 1;
+        z-index: 2;
+        align-self: center;
+        justify-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0 16px;
+        box-sizing: border-box;
+        color: var(--400, #F1F8FF);
+        font-family: "Special Gothic Expanded One";
+        font-size: 65.121px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 157.193%; /* 102.365px */
+        letter-spacing: 30px;
+
+        span {
+            display: block;
+        }
+    }
+}

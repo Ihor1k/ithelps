@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1440px; /* раніше могло бути 1440px — зменшено для кращої адаптивності */
+    margin: 0 auto;
+    padding-left: clamp(20px, 5vw, 48px);
+    padding-right: clamp(20px, 5vw, 48px);
+    box-sizing: border-box;
+    @media screen and (max-width: 480px) {
+        max-width: 480px;
+        padding: 0px 16px;
+    }
+}

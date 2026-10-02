@@ -1,0 +1,189 @@
+.footer {
+    margin-top: 160px;
+    border-radius: 70px 70px 0 0;
+    background: var(--Primary, #00254A);
+    padding: 40px 0;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        align-items: center; 
+      }
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer-row:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #F1F8FF;
+}
+
+.footer-block, .footer-menu, .footer-context {
+    width: 49%;
+}
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-link {
+    position: relative;
+    color: var(--400, #F1F8FF);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    // text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    // border-bottom: 1px solid transparent;
+    transition: all 400ms ease-in-out;
+}
+
+.footer-link:hover {
+    color: #C1FF02;
+}
+
+.arrow-top {
+    border-radius: 12px;
+    background: var(--400, #F1F8FF);
+    padding: 13px 15px;
+    transition: all 400ms ease-in-out;
+}
+
+.arrow-top:hover {
+    background: #C1FF02;
+}
+
+.footer-context {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.footer-adres {
+    color: var(--L-Accent, #DAFF66);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-text {
+    color: var(--400, #F1F8FF);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;    
+}
+
+.footer-email {
+    color: var(--400, #F1F8FF);
+    font-family: "Special Gothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.copyright {
+    color: var(--500, #95999E);
+font-family: "Special Gothic";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 166.667% */
+width: 49%;
+}
+
+.footer-policy {
+    color: var(--500, #95999E);
+    font-family: "Special Gothic";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    width: 49%;
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        margin-top: 80px;
+        border-radius: 70px 70px 0 0;
+        padding: 40px 0 20px 0;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .footer-block,
+    .footer-menu,
+    .footer-context,
+    .copyright,
+    .footer-policy {
+        width: 100%;
+    }
+
+    .footer-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-link {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer-context {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-email {
+        font-size: 18px;
+        word-break: break-word;
+        text-align: center;
+    }
+
+    .copyright,
+    .footer-policy {
+        text-align: center;
+    }
+
+    .arrow-top {
+        display: none;
+    }
+}

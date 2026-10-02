@@ -1,0 +1,214 @@
+.how {
+    padding: 80px 0;
+
+    @media screen and (max-width: 480px) {
+        padding: 48px 0;
+    }
+}
+
+.how-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.how-info {
+    position: sticky;
+    top: 120px;
+    width: 50%;
+
+    @media screen and (max-width: 960px) {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.how-suptitle {
+    color: var(--900, #1D1F21);
+
+    /* Section Style */
+    font-family: "Special Gothic";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--Primary, #00254A);
+    width: 100%;
+}
+
+.how-title {
+    color: var(--900, #1D1F21);
+
+    /* Headline Style */
+    font-family: "Special Gothic Expanded One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin-top: 40px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 28px;
+        letter-spacing: 1.6px;
+        margin-top: 24px;
+    }
+}
+
+.how-text {
+    color: var(--900, #1D1F21);
+    font-family: "Special Gothic";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+
+.how-list {
+    position: relative;
+    width: 50%;
+    list-style: none;
+    margin: 150px 0 0 0;
+    padding: 0;
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-top: 8px;
+    }
+}
+
+.how-item {
+    position: relative;
+    display: flex;
+    gap: 44px;
+    align-items: flex-start;
+    padding-bottom: 72px;
+
+    @media screen and (max-width: 480px) {
+        gap: 16px;
+        padding-bottom: 40px;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 52px;
+        bottom: 12px;
+        left: 18px;
+        width: 3px;
+        background: var(--Primary, #00254A);
+        transition: background 350ms ease;
+    }
+}
+
+.how-item-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+
+    svg,
+    img {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        object-fit: contain;
+    }
+}
+
+.how-item-icon-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.how-item-icon-active {
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.how-item-content {
+    padding-top: 4px;
+}
+
+.how-item-title {
+    color: var(--700, #474A50);
+    font-family: "Special Gothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 13px;
+    transition: color 350ms ease;
+
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+    }
+}
+
+.how-item-text {
+    color: var(--600, #65686B);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%; /* 23.68px */
+    max-width: 470px;
+    transition: color 350ms ease;
+}
+
+.how-item.is-active,
+.how-item.is-passed {
+    .how-item-icon-default {
+        display: none;
+    }
+
+    .how-item-icon-active {
+        display: block;
+    }
+
+    &:not(:last-child)::after {
+        background: #749901;
+    }
+}
+
+.how-item.is-active {
+    .how-item-title {
+        color: var(--Accent, #749901);
+    }
+
+    .how-item-text {
+        color: var(--Primary, #00254A);
+    }
+}

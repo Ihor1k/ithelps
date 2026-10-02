@@ -1,0 +1,153 @@
+.hero {
+    position: relative;
+    height: 100vh;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+}
+
+.hero-img-mobile {
+    display: none;
+    @media screen and (max-width: 480px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+    }
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.hero-title {
+    color: var(--400, #F1F8FF);
+    text-align: center;
+    font-family: "Special Gothic Expanded One";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 86.4px */
+    text-transform: uppercase;
+    max-width: 1090px;
+    width: 100%;
+}
+
+.hero-text {
+    color: rgba(241, 248, 255, 0.90);
+    text-align: center;
+    font-family: "Special Gothic";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 126%; /* 25.2px */
+    max-width: 644px;
+    width: 100%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.hero-button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    background: var(--400, #F1F8FF);
+    border: 1px solid #F1F8FF;
+
+    color: var(--900, #1D1F21);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.hero-button:hover {
+    background: var(--Accent, #C1FF02);
+    border: 1px solid #C1FF02;
+}
+
+.hero-case {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 2px solid var(--500, #95999E);
+    background: transparent;
+
+    color: var(--400, #F1F8FF);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+.hero-case:hover {
+    border: 2px solid var(--Accent, #C1FF02);
+    box-shadow: 0 0 12px 0 rgba(193, 255, 0, 0.48);
+    color: #C1FF02;
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: auto;
+        min-height: 89vh;
+        padding: 150px 0 0 0;
+    }
+
+    .hero-context {
+        gap: 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 118%;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-top: 82px;
+    }
+
+    .hero-button,
+    .hero-case {
+        width: 100%;
+        text-align: center;
+    }
+}

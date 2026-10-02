@@ -1,0 +1,132 @@
+.contact {
+    margin-top: 100px;
+}
+
+.line {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background: #00254A;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.contact-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-suptitle {
+    color: var(--900, #1D1F21);
+
+    /* Section Style */
+    font-family: "Special Gothic";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #00254A;
+    width: 50%;
+    margin-bottom: 90px;
+}
+
+.contact-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-title {
+    color: var(--900, #1D1F21);
+    text-align: center;
+
+    /* Headline Style */
+    font-family: "Special Gothic Expanded One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.contact-text {
+    color: var(--900, #1D1F21);
+text-align: center;
+font-family: "Special Gothic";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 644px;
+margin-bottom: 24px;
+}
+
+.contact-button {
+    color: var(--400, #F1F8FF);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+
+    padding: 12px 27px;
+    border-radius: 12px;
+    background: var(--Primary, #00254A);
+    border: 1px solid #00254A;
+
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+    margin-bottom: 12px;
+}
+
+.contact-button:hover {
+    background: #C1FF02;
+    border: 1px solid #C1FF02;
+    color: var(--900, #1D1F21);
+}
+
+.contact-supbutton {
+    color: var(--600, #65686B);
+    text-align: center;
+    font-family: "Special Gothic";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        margin-top: 64px;
+    }
+
+    // .contact-wrap {
+    //     justify-content: flex-start;
+    // }
+
+    .line {
+        width: 70%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .contact-suptitle {
+        width: 70%;
+        margin-bottom: 80px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+        letter-spacing: 2.56px;
+    }
+
+    .contact-text {
+        font-size: 18px;
+    }
+}
+

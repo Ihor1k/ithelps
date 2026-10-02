@@ -1,0 +1,280 @@
+.reviews {
+    padding: 80px 0;
+}
+
+.reviews-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 136px;
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column-reverse;
+        gap: 40px;
+        align-items: stretch;
+    }
+}
+
+.reviews-slider {
+    width: 45%;
+    min-width: 0;
+    overflow: hidden;
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+    }
+}
+
+.reviews-card {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 24px;
+    border-radius: 44px;
+    border: 2px solid var(--Primary, #00254A);
+    box-shadow: 0 0 5.5px 0 rgba(0, 0, 0, 0.26);
+    background: transparent;
+}
+
+.reviews-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.reviews-card-text {
+    color: var(--900, #1D1F21);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%; /* 23.68px */
+    margin-bottom: 20px;
+}
+
+.reviews-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reviews-avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.reviews-author-name {
+    color: var(--900, #1D1F21);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 148%; /* 23.68px */
+    margin-bottom: 2px;
+}
+
+.reviews-author-role {
+    color: var(--900, #1D1F21);
+    font-family: "Special Gothic";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
+}
+
+.reviews-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+    }
+}
+
+.reviews-suptitle {
+    color: var(--900, #1D1F21);
+
+    /* Section Style */
+    font-family: "Special Gothic";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--Primary, #00254A);
+    width: 100%;
+    text-align: end;
+}
+
+.reviews-title {
+    color: var(--900, #1D1F21);
+
+    /* Headline Style */
+    font-family: "Special Gothic Expanded One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.reviews-text {
+    color: var(--900, #1D1F21);
+    text-align: center;
+    font-family: "Special Gothic";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 466px;
+    margin-top: 16px;
+}
+
+.reviews-nav {
+    display: flex;
+    gap: 8px;
+    margin-top: 40px;
+
+    @media screen and (max-width: 960px) {
+        margin-top: 32px;
+        justify-content: center;
+    }
+}
+
+.reviews-prev,
+.reviews-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background: var(--Primary, #00254A);
+    color: #F1F8FF;
+    cursor: pointer;
+    transition: background 300ms ease, color 300ms ease, opacity 300ms ease;
+
+    &:hover:not(.swiper-button-disabled) {
+        background: var(--Accent, #C1FF02);
+        color: var(--Primary, #00254A);
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0.35;
+        cursor: default;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .reviews {
+        padding: 48px 0;
+    }
+
+    .reviews-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 12px;
+        align-items: start;
+        grid-template-areas:
+            "suptitle suptitle"
+            "title title"
+            "text text"
+            "prev ."
+            "slider slider"
+            ". next";
+    }
+
+    .reviews-info {
+        display: contents;
+        width: auto;
+    }
+
+    .reviews-nav {
+        display: contents;
+        margin-top: 0;
+    }
+
+    .reviews-suptitle {
+        grid-area: suptitle;
+        text-align: end;
+        margin-bottom: 0;
+    }
+
+    .reviews-title {
+        grid-area: title;
+        color: var(--900, #1D1F21);
+        text-align: right;
+        font-family: "Special Gothic Expanded One";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 2.56px;
+        text-transform: uppercase;
+    }
+
+    .reviews-text {
+        grid-area: text;
+        color: var(--900, #1D1F21);
+        text-align: right;
+        font-family: "Special Gothic";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .reviews-prev {
+        grid-area: prev;
+        justify-self: start;
+        align-self: end;
+        margin-bottom: 12px;
+        transform: rotate(90deg);
+    }
+
+    .reviews-slider {
+        grid-area: slider;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .reviews-next {
+        grid-area: next;
+        justify-self: end;
+        align-self: start;
+        margin-top: 12px;
+        transform: rotate(90deg);
+    }
+
+    .reviews-card {
+        min-height: 300px;
+        padding: 28px 22px 24px;
+        // border-radius: 40px;
+        // background: #fff;
+        // box-shadow: none;
+    }
+
+    .reviews-stars {
+        margin-bottom: 20px;
+    }
+
+    .reviews-card-text {
+        flex: 1;
+        margin-bottom: 24px;
+    }
+}

@@ -1,0 +1,190 @@
+.about {
+    background: var(--Primary, #00254A);
+    margin-top: 35px;
+    padding: 80px 0;
+}
+
+.about-suptitle {
+    color: var(--400, #F1F8FF);
+    text-align: center;
+
+    /* Section Style */
+    font-family: "Special Gothic";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.about-title {
+    color: var(--400, #F1F8FF);
+    text-align: center;
+
+    /* Headline Style */
+    font-family: "Special Gothic Expanded One";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.about-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.about-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.about-text {
+    color: var(--400, #F1F8FF);
+    text-align: center;
+    text-shadow: 0 4px 6.7px #000, -90px -31px 6.3px #737373;
+    font-family: "Special Gothic";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 557px;
+    width: 100%;
+}
+
+.about-text-right {
+    text-shadow: 0 4px 6.7px #000, 90px -31px 6.3px #737373;
+}
+
+.about-text-center {
+    text-shadow: 0 -31px 6.3px #737373, 0 0 29.9px #000;
+}
+
+.about-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.about-num {
+    color: var(--Accent, #C1FF02);
+    font-family: "Special Gothic";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.about-item-text {
+    color: var(--Accent, #C1FF02);
+    font-family: "Special Gothic";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        margin-top: 24px;
+        padding: 48px 0 56px;
+    }
+
+    .about-title {
+        font-size: 28px;
+        letter-spacing: 1.4px;
+        margin-top: 28px;
+        line-height: 1.2;
+    }
+
+    .about-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .about-block {
+        display: contents;
+    }
+
+    .about-text, .about-text-center, .about-text-right {
+        color: var(--400, #F1F8FF);
+        text-align: center;
+        text-shadow: 0 4px 6.7px #000, 0 -31px 6.3px #737373;
+        font-family: "Special Gothic";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    // .about-text-center {
+    //     order: 2;
+    //     font-size: 16px;
+    //     line-height: 1.35;
+    //     text-shadow: none;
+    //     max-width: 100%;
+    // }
+
+    // .about-text-right {
+    //     order: 3;
+    //     font-size: 16px;
+    //     line-height: 1.35;
+    //     text-shadow: none;
+    //     max-width: 100%;
+    // }
+
+    .about-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        max-width: 100%;
+        margin: 36px auto 0;
+        gap: 10px;
+    }
+
+    .about-item {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 8px;
+    }
+
+    .about-item:nth-child(1) { order: 1; }
+    .about-item:nth-child(2) { order: 3; }
+    .about-item:nth-child(3) { order: 2; }
+    .about-item:nth-child(4) { order: 4; }
+
+    .about-num {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+        flex-shrink: 0;
+    }
+
+    .about-item-text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+}

@@ -693,7 +693,6 @@ body.menu-open {
     font-size: 28px;
     width: 100%;
     letter-spacing: 2px;
-    text-align: start;
   }
 }
 
@@ -1595,7 +1594,7 @@ body.menu-open {
 
 .cases-content {
   display: none;
-  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1.1fr);
+  grid-template-columns: minmax(350px, 1fr) minmax(350px, 1fr);
   gap: 40px;
   align-items: center;
 }

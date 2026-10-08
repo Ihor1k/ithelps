@@ -246,6 +246,26 @@ table {
   }
 }
 
+.header-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 998;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(to bottom, rgba(241, 248, 255, 0.14) 0%, rgba(241, 248, 255, 0.06) 45%, rgba(241, 248, 255, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 35%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 35%, transparent 100%);
+}
+@media screen and (max-width: 480px) {
+  .header-blur {
+    height: 36px;
+  }
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -614,7 +634,7 @@ body.menu-open {
 @media screen and (max-width: 480px) {
   .popup {
     max-width: 100%;
-    padding: 20px 16px;
+    padding: 50px 16px;
     border-radius: 24px;
   }
 }
@@ -667,6 +687,14 @@ body.menu-open {
   text-align: center;
   max-width: 589px;
   width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .popup-context h3 {
+    font-size: 28px;
+    width: 100%;
+    letter-spacing: 2px;
+    text-align: start;
+  }
 }
 
 .popup-context p {
@@ -1229,6 +1257,7 @@ body.menu-open {
   border: 1px solid #00254A;
   cursor: pointer;
   transition: all 400ms ease-in-out;
+  margin-top: 30px;
 }
 
 .why-btn:hover {
@@ -1912,7 +1941,7 @@ body.menu-open {
 .services-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 100px;
 }
 @media screen and (max-width: 960px) {
@@ -2009,6 +2038,7 @@ body.menu-open {
   width: 50%;
   min-width: 0;
   overflow: hidden;
+  margin-top: 25px;
 }
 @media screen and (max-width: 960px) {
   .services-slider {
@@ -2443,7 +2473,7 @@ body.menu-open {
 .reviews-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 136px;
 }
 @media screen and (max-width: 960px) {
@@ -2458,11 +2488,16 @@ body.menu-open {
   width: 45%;
   min-width: 0;
   overflow: hidden;
+  margin-top: 25px;
 }
 @media screen and (max-width: 960px) {
   .reviews-slider {
     width: 100%;
   }
+}
+
+.reviews-slider .swiper-wrapper {
+  height: 100%;
 }
 
 .reviews-card {

@@ -5,7 +5,7 @@
 .services-inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 100px;
 
     @media screen and (max-width: 960px) {
@@ -101,7 +101,7 @@
     width: 50%;
     min-width: 0;
     overflow: hidden;
-
+    margin-top: 25px;
     @media screen and (max-width: 960px) {
         width: 100%;
     }

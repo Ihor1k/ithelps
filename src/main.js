@@ -6,7 +6,7 @@
 // Swiper is loaded from CDN in index.html (works on GitHub Pages without bundler)
 
 const popup = document.getElementById('popup');
-const openButtons = document.querySelectorAll('.button, .header-button, .hero-button, .contact-button, .built-btn, .cases-btn');
+const openButtons = document.querySelectorAll('.button, .why-button, .header-button, .hero-button, .contact-button, .built-btn, .cases-btn');
 const closeBtn = document.querySelector('.close-popup');
 const form = document.getElementById('joinForm');
 const animItems = document.querySelectorAll('.anim-items');
@@ -318,7 +318,7 @@ if (marketingSlider && window.Swiper) {
     slidesPerView: 1,
     spaceBetween: 16,
     speed: 500,
-    loop: false,
+    loop: true,
     navigation: {
       nextEl: '.marketing-next',
       prevEl: '.marketing-prev',
@@ -333,7 +333,7 @@ if (servicesSlider && window.Swiper) {
     slidesPerView: 1,
     spaceBetween: 24,
     speed: 500,
-    loop: false,
+    loop: true,
     navigation: {
       nextEl: '.services-next',
       prevEl: '.services-prev',
@@ -349,7 +349,7 @@ if (reviewsSlider && window.Swiper) {
     spaceBetween: 24,
     speed: 500,
     loop: true,
-    autoHeight: true,
+    // autoHeight: true,
     navigation: {
       nextEl: '.reviews-next',
       prevEl: '.reviews-prev',

@@ -1029,6 +1029,11 @@ body.menu-open {
     left: 0;
     z-index: -1;
     width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center top;
+       object-position: center top;
   }
 }
 
@@ -1120,9 +1125,17 @@ body.menu-open {
 
 @media screen and (max-width: 480px) {
   .hero {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 500px;
+    padding: 150px 0 48px;
+    overflow: hidden;
+  }
+  .hero .container {
     height: auto;
-    min-height: 89vh;
-    padding: 150px 0 0 0;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .hero-context {
     gap: 20px;
@@ -1148,7 +1161,7 @@ body.menu-open {
   }
 }
 .why {
-  margin-top: 150px;
+  margin-top: 250px;
 }
 
 .why-context {
@@ -1567,10 +1580,16 @@ body.menu-open {
 
 .cases-body {
   padding: 40px 48px 48px;
+  height: 615px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 960px) {
   .cases-body {
     padding: 32px 24px 40px;
+    height: unset;
+    flex-direction: column;
   }
 }
 
@@ -1672,29 +1691,7 @@ body.menu-open {
 }
 
 .cases-content-media {
-  min-width: 0;
-  border-radius: 16px;
   overflow: hidden;
-}
-.cases-content-media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 320px;
-  max-height: 460px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.cases-content-media--frame {
-  border-radius: 40px;
-  background: #fff;
-  padding: 12px;
-}
-.cases-content-media--frame img {
-  border-radius: 28px;
-  min-height: 280px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1733,7 +1730,7 @@ body.menu-open {
     display: flex !important;
     flex-direction: column;
     gap: 20px;
-    align-items: stretch;
+    align-items: center;
   }
   .cases-content[data-case-panel="0"] {
     padding: 0 8px 12px;
@@ -1870,13 +1867,8 @@ body.menu-open {
   width: 100%;
   white-space: nowrap;
   position: relative;
-  margin-top: 35px;
+  padding-top: 35px;
   /* опціонально — невелика тінь або фон */
-}
-@media screen and (max-width: 480px) {
-  .marquee {
-    margin-top: 35px;
-  }
 }
 
 .marquee-track {
@@ -1922,7 +1914,8 @@ body.menu-open {
 /* 📱 адаптив */
 @media (max-width: 480px) {
   .marquee {
-    margin-top: 24px;
+    margin-top: 40px;
+    padding-top: 0;
   }
   .marquee-text {
     font-size: 36px;
@@ -2023,10 +2016,21 @@ body.menu-open {
   cursor: pointer;
   transition: background 300ms ease, color 300ms ease, opacity 300ms ease;
 }
-.services-prev:hover:not(.swiper-button-disabled),
-.services-next:hover:not(.swiper-button-disabled) {
+.services-prev:focus,
+.services-next:focus {
+  outline: none;
+}
+.services-prev:active:not(.swiper-button-disabled),
+.services-next:active:not(.swiper-button-disabled) {
   background: var(--Accent, #C1FF02);
   color: var(--Primary, #00254A);
+}
+@media (hover: hover) and (pointer: fine) {
+  .services-prev:hover:not(.swiper-button-disabled),
+.services-next:hover:not(.swiper-button-disabled) {
+    background: var(--Accent, #C1FF02);
+    color: var(--Primary, #00254A);
+  }
 }
 .services-prev.swiper-button-disabled,
 .services-next.swiper-button-disabled {
@@ -2644,10 +2648,21 @@ body.menu-open {
   cursor: pointer;
   transition: background 300ms ease, color 300ms ease, opacity 300ms ease;
 }
-.reviews-prev:hover:not(.swiper-button-disabled),
-.reviews-next:hover:not(.swiper-button-disabled) {
+.reviews-prev:focus,
+.reviews-next:focus {
+  outline: none;
+}
+.reviews-prev:active:not(.swiper-button-disabled),
+.reviews-next:active:not(.swiper-button-disabled) {
   background: var(--Accent, #C1FF02);
   color: var(--Primary, #00254A);
+}
+@media (hover: hover) and (pointer: fine) {
+  .reviews-prev:hover:not(.swiper-button-disabled),
+.reviews-next:hover:not(.swiper-button-disabled) {
+    background: var(--Accent, #C1FF02);
+    color: var(--Primary, #00254A);
+  }
 }
 .reviews-prev.swiper-button-disabled,
 .reviews-next.swiper-button-disabled {

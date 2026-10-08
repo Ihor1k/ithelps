@@ -86,9 +86,20 @@
     cursor: pointer;
     transition: background 300ms ease, color 300ms ease, opacity 300ms ease;
 
-    &:hover:not(.swiper-button-disabled) {
+    &:focus {
+        outline: none;
+    }
+
+    &:active:not(.swiper-button-disabled) {
         background: var(--Accent, #C1FF02);
         color: var(--Primary, #00254A);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover:not(.swiper-button-disabled) {
+            background: var(--Accent, #C1FF02);
+            color: var(--Primary, #00254A);
+        }
     }
 
     &.swiper-button-disabled {

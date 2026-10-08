@@ -362,6 +362,12 @@ if (reviewsSlider && window.Swiper) {
   });
 }
 
+document.querySelectorAll(
+  '.services-prev, .services-next, .reviews-prev, .reviews-next, .marketing-prev, .marketing-next'
+).forEach((btn) => {
+  btn.addEventListener('pointerup', () => btn.blur());
+});
+
 const howList = document.querySelector('.how-list');
 const howItems = [...document.querySelectorAll('.how-item')];
 
